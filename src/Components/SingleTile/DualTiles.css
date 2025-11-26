@@ -1,0 +1,25 @@
+.single-horizontal-tile-container
+{
+    margin: 2% 1%;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: space-evenly;
+    height: 30vw;
+
+}
+
+
+.single-horizontal-tile{
+    color: var(--app-font-color-white);
+    font-size: 4vh;
+    width: 99vw;
+    height:30vw;
+    background: #a41034;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 7%;  
+
+}
+

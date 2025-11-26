@@ -1,0 +1,124 @@
+main {
+  /* background-color:  #8D021F; */
+  color: black;
+  /* padding: 5vh; */
+
+}
+
+
+header
+{
+    text-align: center;
+    display:flex;
+    direction:row;
+    gap:5vw;
+    background-color:#EAD7D7;
+    padding: 5vh;
+    width: 100vw;
+    justify-content: center; /* horizontal alignment */
+    align-items: center;     /* 🔥 vertical alignment */
+    
+}
+
+header > * {
+    width: 50vw;          /* fixed width for each item */
+    text-align: center;
+}
+
+
+header h2{
+
+    text-align: right;
+}
+
+#summary
+{
+    display: flex;
+    direction: row;
+    gap: 10vw;
+}
+
+iframe{
+
+    height: 50vh;
+    width: 50vw;
+}
+
+#summary-description
+{
+    text-align: left;
+}
+
+#summary-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5vw;
+
+}
+
+#summary-grid-item {
+  align-items:center;
+  font-size:3.5vh;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+#mahasamvit-edu-course-career-opp
+{
+    background-color: #8D021F;
+    color:#FFF;
+    padding: 5vh;
+
+    ul 
+    {
+        color:#FFF;
+
+    }
+
+    li::marker {
+    color: #EAD7D7; /* red bullet */
+}
+}
+
+#mahasamvit-edu-course-syllabus
+{
+    background-color:black;
+    color:#FFF;
+    padding: 5vh;
+
+    text-align: right;
+    
+    ul 
+    {
+        color:#FFF;
+        text-align: right;
+        list-style-type: none; /* Removes bullets */
+    }
+
+
+
+}
+
+
+#mahasamvit-edu-course-syllabus-action
+{
+
+
+
+}
+#mahasamvit-edu-course-faculty
+{
+     padding: 5vh;
+    background-color:#EAD7D7;
+    color:#000;
+    text-align: center;
+}
+
+#mahasamvit-edu-course-action
+{
+     padding: 5vh;
+    background-color: #8D021F;
+    color:#FFF;
+    text-align: center;
+}

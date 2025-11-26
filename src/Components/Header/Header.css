@@ -1,0 +1,74 @@
+/* .ms-financial-edu-website-header{
+
+    background-color: var( --app-bg-color-secondary);
+    color: var(--app-font-color-white);
+    z-index: 2;
+    height: 10vh;
+    width: 100vw; 
+    max-width: 100%; 
+    text-align: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 33vw;
+
+
+}
+
+
+
+.header-company-name
+{
+  font-size: 40px;
+  white-space: nowrap;
+
+} */
+
+/* .ms-financial-edu-website-header span:first-child {
+  margin-left:2vw;
+} */
+
+/* .ms-financial-edu-website-header span:last-child {
+  margin-right:33vw;
+} */
+
+/* 
+.ms-financial-edu-website-header {
+  margin-right:33vw;
+} */
+
+
+/* Reset margins and padding for the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.ms-financial-edu-website-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  max-width: 100%; 
+  overflow-x: hidden;
+  
+  background-color: var(--app-bg-color-secondary);
+  color: var(--app-font-color-white);
+  
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  z-index: 2;
+}
+
+.header-company-name {
+  font-size: 40px;
+  white-space: nowrap;
+}

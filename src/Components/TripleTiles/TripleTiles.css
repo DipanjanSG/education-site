@@ -1,0 +1,41 @@
+.dual-tiles
+{
+    margin: 2% 1%;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-evenly;
+    height: 30vw;
+
+}
+
+
+.triple-tile{
+    color: black;
+    font-size: 4vh;
+    width: 30vw;
+    height:30vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;   
+    border-radius: 4%;
+    font-family: "Source Serif 4", serif;
+    font-size: 200%;
+    font-weight: 600;
+
+}
+
+/* .triple-tile > *::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.9) 0%,  
+    rgba(255, 255, 255, 0.5) 40%,
+    rgba(255, 255, 255, 0.0) 100% 
+  );
+  pointer-events: none;
+} */
+

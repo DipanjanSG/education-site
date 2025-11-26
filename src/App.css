@@ -1,0 +1,146 @@
+
+:root {
+  --app-bg-color: #800000; 
+  --app-bg-color-secondary: #222222; 
+  --app-font-color-white: white;
+}
+
+#main-heading
+{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   font-family: 'Canela Deck Web';
+   font-size : calc(3.5vh + 3.5vw);
+   color: white;
+   transform: translate(-50%, -50%); 
+   text-align: center;
+   line-height: .1;
+
+   z-index:1;
+}
+
+/* .homepage-img-container p 
+{
+   position: absolute;
+   bottom: 8%;
+   color: white;
+   font-family:'Times New Roman', Times, serif;
+   font-size : calc(1.5vh + 1.5vw);
+   transform: translate(-50%); 
+   z-index:1;
+
+
+} */
+
+#homepage-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* centers it perfectly */
+  z-index: 10;                       /* ensures it appears above image */
+  color: #a41034;
+  text-align: center;
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+
+  /* 👇 Responsive font size */
+  font-size: clamp(1.2rem, 3vw, 3rem);
+}
+
+
+#homepage-links
+{
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+  font-size: 50%;
+  font-weight: 500;
+
+}
+#homepage-logo{
+  display: flex;
+  align-items: center;
+
+}
+
+#homepage-logo img {
+  position: absolute;
+  top: 2vh;          /* a little margin from top */
+  left: 2vw;         /* a little margin from left */
+  width: 5%;     /* shrink the image */
+  height: auto;      /* maintain aspect ratio */
+  object-fit: contain;
+  z-index: 10;
+  border-radius: 50%; 
+
+}
+
+
+#homepage-logo span {
+  position: absolute;
+  top: 2vh; 
+  left: 2vw;
+  width: 5%;    
+  margin-left : 6vw;
+  height: auto;      /* maintain aspect ratio */
+  object-fit: contain;
+  z-index: 10;
+  border-radius: 50%;
+  color : black;
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; 
+
+}
+
+#homepage-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: var(--app-bg-color);
+  height: 100vh; /* ✅ makes the section fill the entire viewport height */
+}
+
+#homepage-image > * {
+  position: relative;
+  flex: 0 0 100vw;  /* each item takes full viewport width */
+  height: 100%;     /* ✅ ensures child matches parent height */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* hides image overflow when using object-fit */
+}
+
+#homepage-image img {
+  width: 100%;
+  height: 100%;      /* ✅ fill the container vertically */
+  object-fit: cover; /* maintain aspect ratio while filling */
+  object-position: center;
+  display: block;
+  filter: brightness(35%); /* darken base image slightly */
+}
+
+
+
+/* ✅ Gradient overlay strongest at bottom */
+#homepage-image > *::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.9) 0%,   /* strongest white at bottom */
+    rgba(255, 255, 255, 0.5) 40%,  /* medium in middle */
+    rgba(255, 255, 255, 0.0) 100%  /* transparent at top */
+  );
+  pointer-events: none;
+}
