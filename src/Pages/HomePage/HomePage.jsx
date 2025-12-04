@@ -15,8 +15,8 @@ export const facultyCardContext = createContext();
 
 function HomePage() {
 
-   var faculty1= new Faculty("" , "Our World Class Faculty", [], "Our faculty is a group of highly experienced educators and professionals who care about your learning journey. They combine deep subject knowle", "" ,[], "",[], [],"/assets/faculty.png","/earn-while-learning","/faculty");
-   var faculty2= new Faculty("/success-story" , "Student Testimonials", [], "I never imagined learning could be this enjoyable and impactful. This institute transformed the way I think, study, and apply knowledge.", "" , [],"",[], [],"/assets/front-view-smiley-man-holding-book.jpg","/success-story");
+   var faculty1= new Faculty("" , "Our World Class Faculty", [], "Our faculty is a group of highly experienced educators and professionals who care about your learning journey. They combine deep subject knowle", "" ,[], "",[], [],"/assets/faculty.png","/faculty");
+   var faculty2= new Faculty("" , "Student Testimonials", [], "I never imagined learning could be this enjoyable and impactful. This institute transformed the way I think, study, and apply knowledge.", "" , [],"",[], [],"/assets/front-view-smiley-man-holding-book.jpg","/success-story");
    var faculty3= new Faculty("" , "Earn while learning", [], "Start earning from day one while building your career foundation. Learn practical skills and put them to work immediately.",  "" ,[], "",[], [],"/assets/learn-earn.png","/earn-while-learning");
    
    const facultyList = [faculty1, faculty2, faculty3];
@@ -69,7 +69,7 @@ function HomePage() {
                <TileContainer facultyList={facultyList}/>
             </TileContainerContext.Provider>
 
-         <HorizontalSectionWithPic knowMoreLink="/unique-teaching" picOnLeft={false} pic={onlineLibrary} heading={"Our Online Library"} text={"Students today hardly have the time to sit down and read a paperback novel. They read everything on their laptop or smartphone or any internet-enabled device. This is because everything is available online at the tap of a few buttons."}/>
+         <HorizontalSectionWithPic knowMoreLink="/online-library" picOnLeft={false} pic={onlineLibrary} heading={"Our Online Library"} text={"Students today hardly have the time to sit down and read a paperback novel. They read everything on their laptop or smartphone or any internet-enabled device. This is because everything is available online at the tap of a few buttons."}/>
       </div>
   
 

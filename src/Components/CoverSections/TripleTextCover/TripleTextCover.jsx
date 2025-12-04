@@ -1,5 +1,7 @@
 import './TripleTextCover.css';
-import financeStudentBlack from "../../../assets/finance-student-black.jpg";
+import financeStudentBlack from "../../../assets/many-books.png";
+import financeStudentBlack2 from "../../../assets/many-authors.png";
+import financeStudentBlack3 from "../../../assets/unlimited-reading.png";
 
 export default function TripleTextCover({coverText})
 {
@@ -8,12 +10,21 @@ export default function TripleTextCover({coverText})
 
 
         <section className='triple-text-cover'>
-            {/* <img src={financeStudentBlack} className=''></img>
-            <img src={financeStudentBlack} className=''></img>
-            <img src={financeStudentBlack} className=''></img> */}
-            <section className="triple-text-cover-text">{coverText[0]}</section>
-            <section className="triple-text-cover-text">{coverText[1]}</section>
-            <section className="triple-text-cover-text">{coverText[2]}</section>
+            <section className="triple-text-cover-container">
+                <img src={financeStudentBlack} className='triple-text-cover-img'/>
+                <span>{coverText[0]}</span>
+            </section>
+
+            <section className="triple-text-cover-container">
+                <img src={financeStudentBlack2} className='triple-text-cover-img'/>
+                <span>{coverText[1]}</span>
+            </section>
+
+
+            <section className="triple-text-cover-container">
+                <img src={financeStudentBlack3} className='triple-text-cover-img'/>
+                <span>{coverText[2]}</span>
+            </section>
         </section>
     );
 

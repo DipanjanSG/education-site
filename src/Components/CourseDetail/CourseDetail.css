@@ -64,56 +64,13 @@ iframe{
 }
 
 
-#mahasamvit-edu-course-career-opp
-{
-    background-color: #8D021F;
-    color:#FFF;
-    padding: 5vh;
-
-    ul 
-    {
-        color:#FFF;
-
-    }
-
-    li::marker {
-    color: #EAD7D7; /* red bullet */
-}
-}
-
-#mahasamvit-edu-course-syllabus
-{
-    background-color:black;
-    color:#FFF;
-    padding: 5vh;
-
-    text-align: right;
-    
-    ul 
-    {
-        color:#FFF;
-        text-align: right;
-        list-style-type: none; /* Removes bullets */
-    }
-
-
-
-}
-
-
 #mahasamvit-edu-course-syllabus-action
 {
 
 
 
 }
-#mahasamvit-edu-course-faculty
-{
-     padding: 5vh;
-    background-color:#EAD7D7;
-    color:#000;
-    text-align: center;
-}
+
 
 #mahasamvit-edu-course-action
 {

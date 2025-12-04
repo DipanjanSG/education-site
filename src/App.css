@@ -40,7 +40,7 @@
   left: 50%;
   transform: translate(-50%, -50%);  /* centers it perfectly */
   z-index: 10;                       /* ensures it appears above image */
-  color: #a41034;
+  /* color: #a41034; */
   text-align: center;
   font-family: "Source Serif 4", serif;
   font-optical-sizing: auto;

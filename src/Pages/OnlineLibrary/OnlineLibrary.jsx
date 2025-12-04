@@ -1,5 +1,6 @@
-import './OnlineLibrary';
+import './OnlineLibrary.css';
 import TripleTextCover from '../../Components/CoverSections/TripleTextCover/TripleTextCover';
+import hourGlass from "../../assets/hour-glass.png";
 
 
 
@@ -14,9 +15,9 @@ export default function OnlineLibrary()
 
         <section>
             <TripleTextCover coverText={coverText}/>
-            <p>The library Will be available in a few months</p>
-            {/* <HorizontalSectionWithPic picOnLeft={true} pic={coverPic1} heading={"This course helped me understand concepts that always felt complicated before. The lessons were clear, practical, and easy to follow."} text={"Priya Anand"}/> */}
-            
+            <img src={hourGlass} className='hour-glass'></img>
+            <hr />
+            <p className='not-available-text'>The library will be available in a few months</p>  
         </section>
     );
 }
