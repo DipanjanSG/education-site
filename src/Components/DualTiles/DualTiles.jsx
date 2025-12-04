@@ -1,23 +1,23 @@
 import './DualTiles.css';
+import { Link } from 'react-router-dom';
 
 function DualTiles({careerLeftTile, careerRightTile,pics })
 {
     return(
         <div id ="dual-tiles" className="dual-tiles">
-            <span id="tile_left" className="single-tile" style={{
-          backgroundImage: `linear-gradient(to top,
-            rgba(255, 255, 255, 0.9) 0%,  
-            rgba(255, 255, 255, 0.55) 55%,
-            rgba(255, 255, 255, 0.0) 100%), 
-            url(${pics[0]})`,
-        }}><span>{careerLeftTile}</span></span>
-            <span id="tile_right" className="single-tile" style={{
-          backgroundImage: `linear-gradient(to top,
-            rgba(255, 255, 255, 0.9) 0%,  
-            rgba(255, 255, 255, 0.55) 55%,
-            rgba(255, 255, 255, 0.0) 100%), 
-            url(${pics[1]})`,
-        }}><span>{careerRightTile}</span></span>
+            <section id="tile_left" className="single-card" style={{ width: `47vw`}} >
+              <img src={pics[0]} style={{ width: `100%`}} ></img>
+              <Link to="/course-categories/courses"  className='link-to-courses' state = {{  courseCategory : careerLeftTile}}>{careerLeftTile}</Link>
+            </section>
+
+
+       
+
+
+            <section id="tile_right" className="single-card" style={{ width: `47vw`}}>
+              <img src={pics[1]} style={{ width: `100%`}}></img>
+              <Link to="/course-categories/courses"  className='link-to-courses' state = {{  courseCategory : careerLeftTile}}>{careerRightTile}</Link>
+            </section>
         </div>
     )
 }

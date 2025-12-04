@@ -15,7 +15,7 @@
     width: 47vw;
     height:30vw;
     background: black;
-    color:black;
+    color:white;
     display: flex;
     justify-content: center; 
     align-items: center;   
@@ -23,6 +23,9 @@
     font-family: "Source Serif 4", serif;
     font-size: 200%;
     font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
 
 }
-

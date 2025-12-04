@@ -15,7 +15,7 @@ import academicCourses from "../../assets/academic-courses.png";
 import dualDegree from "../../assets/dual-degree.png";
 
 import govtJobsCourses from "../../assets/govt-jobs-courses.png";
-import accountsAndTax from "../../assets/accounts-and-tax.png";
+import accountsAndTax from "../../assets/accounts-and-tax.jpg";
 
 function CareerOppAndCourseCategories()
 {
@@ -27,7 +27,7 @@ function CareerOppAndCourseCategories()
 
 
    return (
-    <div>
+    <div className='page'>
         
 
      <div id="homepage-heading" >
@@ -45,9 +45,12 @@ function CareerOppAndCourseCategories()
     </div>
 
 
-    <TripleTiles careerLeftTile={"Banking & Insurance"} careerMiddleTile={"Legal Finance"} careerRightTile={"Capital, Commodity, Currency Market"} pics={rowOnePics}></TripleTiles>
+    <section className='tile-container'>
+    <TripleTiles careerLeftTile={"Banking & Insurance"} careerMiddleTile={"Legal Finance"} careerRightTile={"Capital, Commodity \n& Currency Market"} pics={rowOnePics}></TripleTiles>
     <DualTiles careerLeftTile={"Govt Jobs (SEBI, RBI, EXCHANGES)"} careerRightTile={"Accounts & Tax"} pics={rowTwoPics}></DualTiles>
     <TripleTiles careerLeftTile={"Fund & Wealth Management"} careerMiddleTile={"Academic Courses"} careerRightTile={"Dual Degree for Skilled Professionals"} pics={rowThreePics}></TripleTiles>
+    </section>
+    
     </div> 
 
 

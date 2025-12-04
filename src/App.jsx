@@ -5,7 +5,10 @@ import CareerOppAndCourseCategories from './Pages/CareerOppAndCourseCategories/C
 import CategoryCourseList from './Pages/CategoryCourseList/CategoryCourseList';
 import Footer from './Components/Footer/Footer';
 import Faculty from './Pages/FacultyList/FacultyList';
-
+import EarnWhileLearning from './Pages/EarnWhileLearning/EarnWhileLearning';
+import UniqueTeaching from './Pages/UniqueTeaching/UniqueTeaching';
+import SuccessStory from './Pages/SuccessStory/SuccessStory';
+import OnlineLibrary from './Pages/OnlineLibrary/OnlineLibrary';
 
 function App() {
 
@@ -18,6 +21,10 @@ function App() {
          <Route  path = "/course-categories" element ={<CareerOppAndCourseCategories/>} />
          <Route  path = "/course-categories/courses" element ={<CategoryCourseList/>} />
          <Route  path = "/faculty" element ={<Faculty/>} />
+         <Route  path = "/earn-while-learning" element ={<EarnWhileLearning/>} />
+         <Route  path = "/unique-teaching" element ={<UniqueTeaching/>} />
+         <Route  path = "/success-story" element ={<SuccessStory/>} />
+         <Route  path = "/online-library" element ={<OnlineLibrary/>} />
       </Routes>
       <Footer/>
       </div>

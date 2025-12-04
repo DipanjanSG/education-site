@@ -15,7 +15,6 @@ import academicCourses from "../../assets/academic-courses.png";
 import dualDegree from "../../assets/dual-degree.png";
 
 import govtJobsCourses from "../../assets/govt-jobs-courses.png";
-import accountsAndTax from "../../assets/accounts-and-tax.png";
 import SingleTilePic from '../../Components/SingleTilePic/SingleTilePic';
 import Faculty from '../Models/Faculty';
 import TileContainer from '../../Components/TileContainer/TileContainer';

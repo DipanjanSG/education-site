@@ -1,13 +1,14 @@
 import './SingleTilePic.css';
 
 import {useContext } from 'react';
-import { facultyCardContext}  from '../../Pages/HomePage/HomePage';
+import TileContainerContext  from '../../Contexts/TileContainerContext.js';
 import { useNavigate } from 'react-router-dom';
+import KnowMoreButton from '../Buttons/KnowMoreButton/KnowMoreButton.jsx';
 
 function SingleTilePic({contentsObj})
 {
 
-    const cssValues = useContext(facultyCardContext);
+    const {cssValues,knowMoreSection} = useContext(TileContainerContext);
     const navigate = useNavigate();
 
     const styleObj = {};
@@ -17,11 +18,13 @@ function SingleTilePic({contentsObj})
         styleObj.height = cssValues.facultyCardHeight;
         styleObj.justifyContent = cssValues.justifyContent;
         styleObj.width = cssValues.width;
+
+        console.log(cssValues.facultyCardHeight);
     }
 
     return(
        
-        <section id="tile_left" onClick={() => navigate("/faculty")} className="single-horizontal-tile" 
+        <section id="tile_left" onClick={() => navigate(contentsObj.knowMoreLink)} className="single-horizontal-tile" 
                                          style={styleObj}>
                                                     
             <img src={contentsObj.pic}></img>
@@ -38,6 +41,7 @@ function SingleTilePic({contentsObj})
 
                 <p>{contentsObj.coursesTaught.join(", ")}</p>
                 
+                {knowMoreSection.isSectionVisible && <KnowMoreButton marginLeft={"20px"}/>}
             </section>
         </section>
     )

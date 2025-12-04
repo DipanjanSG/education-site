@@ -1,7 +1,7 @@
 class Faculty
 {
 
-    constructor(designation, name , degrees, department, role, coursesTaught , address ="", phoneNumbers =[],emailId =[], pic)
+    constructor(designation, name , degrees, department, role, coursesTaught , address ="", phoneNumbers =[],emailId =[], pic,knowMoreLink="")
     {
         this.designation = designation || "";
         this.name = name || "";
@@ -13,6 +13,8 @@ class Faculty
         this.phoneNumbers = phoneNumbers || [];    // array of strings
         this.emailId = emailId || "";
         this.pic = pic||"";
+        this.knowMoreLink = knowMoreLink||"";
+
     }
 
 }

@@ -1,7 +1,8 @@
 
 :root {
-  --app-bg-color: #800000; 
-  --app-bg-color-secondary: #222222; 
+  --app-bg-color: #800000;
+  --app-bg-color-secondary: #c53333;
+  --app-bg-color-tertiary: #914141; 
   --app-font-color-white: white;
 }
 
@@ -138,9 +139,76 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(255, 255, 255, 0.9) 0%,   /* strongest white at bottom */
-    rgba(255, 255, 255, 0.5) 40%,  /* medium in middle */
+    rgba(255, 255, 255, 0.2) 100%,   /* strongest white at bottom */
+    rgba(255, 255, 255, 0.1) 100%,  /* medium in middle */
     rgba(255, 255, 255, 0.0) 100%  /* transparent at top */
   );
   pointer-events: none;
+}
+
+#cover-image-black-overlay > *::after {
+
+ content: "";
+ position: absolute;
+ inset: 0;
+
+
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 244, 244, 0.3) 0%,    /* fully transparent at top */
+    rgba(243, 244, 244, 0.4) 70%,  /* smooth fade zone */
+    rgba(243, 244, 244, 0.85) 88%, /* almost solid */
+    #F3F4F4 100%                   /* full match with next section */
+  );
+
+  pointer-events: none;
+
+}
+
+
+#cover-image-black-overlay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: var(--app-bg-color);
+  height: 100vh; /* ✅ makes the section fill the entire viewport height */
+}
+
+#cover-image-black-overlay > * {
+  position: relative;
+  flex: 0 0 100vw;  /* each item takes full viewport width */
+  height: 100%;     /* ✅ ensures child matches parent height */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* hides image overflow when using object-fit */
+}
+
+#cover-image-black-overlay img {
+  width: 100%;
+  height: 100%;      /* ✅ fill the container vertically */
+  object-fit: cover; /* maintain aspect ratio while filling */
+  object-position: center;
+  display: block;
+  filter: brightness(35%); /* darken base image slightly */
+}
+
+
+#other-cover-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* centers it perfectly */
+  z-index: 10;                       /* ensures it appears above image */
+  color: #000;
+  text-align: center;
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+
+  /* 👇 Responsive font size */
+  font-size: clamp(1.2rem, 3vw, 3rem);
 }
