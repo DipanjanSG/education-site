@@ -8,6 +8,8 @@ import { useLocation } from 'react-router-dom'
 import financeStudentBlack from "../../assets/finance-student-black.jpg";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import CourseDetail from '../../Components/CourseDetail/CourseDetail';
+import {SELECT_COURSES} from '../../constants/commonConstants';
+
 
 function CategoryCourseList()
 {
@@ -19,14 +21,17 @@ function CategoryCourseList()
 
    function selectCourseHandler(selectedCourseFromDropDown)
    {
-      setSelectedCourseName(selectedCourseFromDropDown);
+      if(selectedCourseFromDropDown === SELECT_COURSES)
+         setSelectedCourseName(null);
+      else
+         setSelectedCourseName(selectedCourseFromDropDown);
+
    }
 
 
 
    return (
     <section>
-    
 
          <div id="homepage-heading" >
             <h2>Courses in</h2>
@@ -34,16 +39,10 @@ function CategoryCourseList()
             <Dropdown selectCourseHandler={selectCourseHandler}/>
          </div>
 
-
-
-     
-
          <div id="homepage-image">
             <div id="image-finance-student" class="homepage-img-container">
-                  <img src={financeStudentBlack}/>
+                <img src={financeStudentBlack}/>
             </div>
-
-
          </div>
 
          {selectedCourseName !== null && <CourseDetail courseName={selectedCourseName}/>}

@@ -1,6 +1,7 @@
 section{
 
   /* background-color: #8D021F; */
+  max-width: 100vw;
 }
 
 div#homepage-heading {
@@ -19,6 +20,7 @@ div#homepage-heading {
   /* 👇 Responsive font size */
   font-size: clamp(1.2rem, 3vw, 3rem) !important;
   /* font-size:10vw; */
+
   
 }
 
@@ -31,6 +33,7 @@ div#homepage-heading {
   color: black;
   font-size: 50%;
   font-weight: 500;
+   width: 100vw;
 
 }
 

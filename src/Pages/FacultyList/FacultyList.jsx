@@ -18,9 +18,9 @@ import govtJobsCourses from "../../assets/govt-jobs-courses.png";
 import SingleTilePic from '../../Components/SingleTilePic/SingleTilePic';
 import Faculty from '../Models/Faculty';
 import TileContainer from '../../Components/TileContainer/TileContainer';
+import TileContainerContext from '../../Contexts/TileContainerContext.js';
 import { createContext } from 'react';
 
-export const facultyCardContext = createContext();
 
 function FacultyList()
 {
@@ -37,9 +37,13 @@ function FacultyList()
 
    const cssValues = {
                         facultyCardHeight: "70vh",
-                        width : "30vw"
+                        width : "30vw",
+                        justifyContent : "space-evenly"
                      };
 
+   const knowMoreSection = {
+           isSectionVisible : false
+       };
 
    // useEffect(() => 
    //    {
@@ -74,9 +78,9 @@ function FacultyList()
 
       </section> */}
 
-      <facultyCardContext.Provider value={cssValues}>
+      <TileContainerContext.Provider value={{cssValues,knowMoreSection}}>
          <TileContainer facultyList={facultyList}/>
-      </facultyCardContext.Provider>
+      </TileContainerContext.Provider>
 
 
     

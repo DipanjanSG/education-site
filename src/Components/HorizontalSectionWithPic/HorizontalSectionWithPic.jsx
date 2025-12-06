@@ -9,7 +9,7 @@ export default function HorizontalSectionWithPic({pic,picOnLeft,heading,text,kno
                    {picOnLeft && <img src={pic}/>}
 
                    <section>
-                        <h1>{heading}</h1>
+                        <h2>{heading}</h2>
                         <hr></hr>
                         <br></br>
                         {text}

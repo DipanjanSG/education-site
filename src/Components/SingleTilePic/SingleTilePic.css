@@ -38,12 +38,12 @@
        text-align: left;
        padding :20px 12px;
        margin: 0px 20px;
-       font-size:60%;
+       /* font-size:60%; */
 }
 
 .mahasamvit-edu-faculty-name
 {
-    font-size: 130%;
+    font-size: 90%;
     font-weight: 640;
     padding :0 20px;
 }

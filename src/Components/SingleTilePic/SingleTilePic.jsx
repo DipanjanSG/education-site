@@ -18,8 +18,6 @@ function SingleTilePic({contentsObj})
         styleObj.height = cssValues.facultyCardHeight;
         styleObj.justifyContent = cssValues.justifyContent;
         styleObj.width = cssValues.width;
-
-        console.log(cssValues.facultyCardHeight);
     }
 
     return(
@@ -34,14 +32,14 @@ function SingleTilePic({contentsObj})
                 </span>
                 <p>{contentsObj.degrees.join(", ")}</p>
                 
-                <p>{contentsObj.role} of {contentsObj.department}</p>
+                {contentsObj.role && <p>{contentsObj.role} of {contentsObj.department}</p>}
                 <hr></hr>
-                <p></p>
-                {contentsObj.coursesTaught.length > 0 && <p class="mahasamvit-edu-faculty-courses-taught">Courses Taught</p>}
+                {/* <p></p> */}
+                {contentsObj.coursesTaught.length > 0 && <section><p class="mahasamvit-edu-faculty-courses-taught">Courses Taught</p>
 
-                <p>{contentsObj.coursesTaught.join(", ")}</p>
+                <p>{contentsObj.coursesTaught.join(", ")}</p></section>}
                 
-                {knowMoreSection.isSectionVisible && <KnowMoreButton marginLeft={"20px"}/>}
+                {knowMoreSection.isSectionVisible && knowMoreSection.component && <knowMoreSection.component marginLeft={"20px"}/>}
             </section>
         </section>
     )

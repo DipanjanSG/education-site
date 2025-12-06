@@ -9,7 +9,8 @@ import onlineLibrary from '../../assets/online-library.jpg';
 import TileContainer from '../../Components/TileContainer/TileContainer';
 import Faculty from '../Models/Faculty';
 import { createContext } from 'react'; 
-import TileContainerContext from '../../Contexts/TileContainerContext.js'
+import TileContainerContext from '../../Contexts/TileContainerContext.js';
+import KnowMoreButton from '../../Components/Buttons/KnowMoreButton/KnowMoreButton';
 
 export const facultyCardContext = createContext();
 
@@ -28,10 +29,13 @@ function HomePage() {
 
    
     const knowMoreSection = {
-        isSectionVisible : true
+        isSectionVisible : true,
+        component: KnowMoreButton
     };
 
 
+
+        
 
   return (
 
@@ -63,7 +67,6 @@ function HomePage() {
 
       
          <HorizontalSectionWithPic knowMoreLink="/unique-teaching" picOnLeft={true} pic={teachingTechnique} heading={"Our Unique Teaching Methology"} text={"Our methodology focuses on conceptual clarity, guided practice, and reflective learning. We use structured frameworks and proven instructional techniques. Each topic progresses from foundational knowledge to advanced application."}/>
-
 
             <TileContainerContext.Provider value={{cssValues,knowMoreSection}}>
                <TileContainer facultyList={facultyList}/>

@@ -4,6 +4,7 @@ import coverPic from '../../assets/unique-teaching.png';
 import TileContainerContext from '../../Contexts/TileContainerContext';
 import Faculty from '../Models/Faculty';
 import TileContainer from '../../Components/TileContainer/TileContainer';
+import KnowMoreButtonPopUp from '../../Components/Buttons/KnowMoreButtonPopUp/KnowMoreButtonPopUp';
 
 
 
@@ -15,6 +16,11 @@ export default function UniqueTeaching()
                         width : "30vw",
                         justifyContent : "space-evenly",
                      };
+    const knowMoreSection = {
+        isSectionVisible : true,
+        component: KnowMoreButtonPopUp
+    };
+
     var faculty1= new Faculty("" , "Visualization", [], "Our faculty is a group of highly experienced educators and professionals who care about your learning journey. They combine deep subject knowle", "" ,[], "",[], [],"/assets/visual-learning-card.png");
     var faculty2= new Faculty("" , "Cooperative Learning", [], "I never imagined learning could be this enjoyable and impactful. This institute transformed the way I think, study, and apply knowledge.", "" , [],"",[], [],"/assets/cooperative-learning.png");
     var faculty3= new Faculty("" , "Inquiry based Instruction", [], "Start earning from day one while building your career foundation. Learn practical skills and put them to work immediately.",  "" ,[], "",[], [],"/assets/inquiry-based-learning.png");
@@ -29,8 +35,7 @@ export default function UniqueTeaching()
     return(
         <section>
             <HorizontalSectionWithPic picOnLeft={false} pic={coverPic} heading={"Our Effective Teaching strategies in the classroom will help you stand out."} text={""}/>
-
-             <TileContainerContext.Provider value={cssValues}>
+             <TileContainerContext.Provider value={{cssValues,knowMoreSection}}>
                <TileContainer facultyList={facultyList}/>
             </TileContainerContext.Provider>
 

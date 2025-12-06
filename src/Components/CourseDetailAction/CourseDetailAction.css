@@ -1,0 +1,42 @@
+#mahasamvit-edu-course-action-grid-container
+{
+    padding: 5vh;
+    background-color: #8D021F;
+    color:#FFF;
+    text-align: center;
+
+    display:grid;
+    grid-template-columns : 1fr 1fr;
+    gap: 5%;
+}
+
+.course-action-grid-item
+{
+    justify-content: center;
+}
+
+.heading
+{
+    text-align: left;
+    padding: 3vw;
+    width: 50vw;
+}
+
+.course-action-buttons
+{
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-action-button
+{
+    width: 70%;
+}
+
+.button-divider
+{
+    padding: 6% 0;
+}

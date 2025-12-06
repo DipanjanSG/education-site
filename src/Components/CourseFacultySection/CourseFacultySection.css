@@ -1,13 +1,16 @@
 #mahasamvit-edu-course-faculty
 {
     padding: 5vh;
-    
-    
     text-align: center;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .faculty-section-heading
 {
-    color:white;
-    background-color:#EAD7D7;
+    color: white;
+    font-size: 300%;
+    font-weight: bold;
+    width: 100%;
+    max-width: 100vw;
 }

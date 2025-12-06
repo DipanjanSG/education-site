@@ -1,30 +1,25 @@
-// import './EarnWhileLearning.css'
-// import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-// import WorkIcon from '@mui/icons-material/Work';
-// import 'react-vertical-timeline-component/style.min.css';
+import { useState, useEffect } from 'react';
+import { Chrono } from 'react-chrono';
 
-export default function EarnWhileLearning()
-{
+export default function EarnWhileLearning() {
+  const [isMounted, setIsMounted] = useState(false);
 
-    return(
-    
-//         <VerticalTimeline>
-//             <VerticalTimelineElement
-//                 className="vertical-timeline-element--work"
-//                 date="2011 - present"
-//                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-//                 icon={<WorkIcon />}
-//             >
-//                 <h3 className="vertical-timeline-element-title">Creative Director</h3>
-//                 <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-//                 <p>
-//                 Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-//                 </p>
-//             </VerticalTimelineElement>
-//         </VerticalTimeline>
-           <div></div>
-     );
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
+  const items = [
+    { title: 'May 1940', cardTitle: 'Dunkirk', cardDetailedText: 'Allied evacuation from France' },
+    { title: 'June 1944', cardTitle: 'D-Day', cardDetailedText: 'Normandy invasion begins' }
+  ];
 
+  if (!isMounted) {
+    return <div style={{ width: "100%", height: "600px" }}>Loading timeline...</div>;
+  }
+
+  return (
+    <div style={{ width: "100%", height: "600px" }}>
+      <Chrono items={items} mode="VERTICAL" />
+    </div>
+  );
 }
-
