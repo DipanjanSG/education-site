@@ -36,7 +36,7 @@ function FacultyList()
    const facultyList = [faculty1, faculty2, faculty3, faculty4, faculty5, faculty6, faculty7];
 
    const cssValues = {
-                        facultyCardHeight: "70vh",
+                        facultyCardHeight: "100vh",
                         width : "30vw",
                         justifyContent : "space-evenly"
                      };

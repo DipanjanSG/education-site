@@ -33,10 +33,6 @@ function HomePage() {
         component: KnowMoreButton
     };
 
-
-
-        
-
   return (
 
 

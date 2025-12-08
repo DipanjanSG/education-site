@@ -9,6 +9,7 @@ import EarnWhileLearning from './Pages/EarnWhileLearning/EarnWhileLearning';
 import UniqueTeaching from './Pages/UniqueTeaching/UniqueTeaching';
 import SuccessStory from './Pages/SuccessStory/SuccessStory';
 import OnlineLibrary from './Pages/OnlineLibrary/OnlineLibrary';
+import ContactUs from './Pages/ContactUs/ContactUs';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
          <Route  path = "/unique-teaching" element ={<UniqueTeaching/>} />
          <Route  path = "/success-story" element ={<SuccessStory/>} />
          <Route  path = "/online-library" element ={<OnlineLibrary/>} />
+         <Route  path = "/contact-us" element ={<ContactUs/>} />
       </Routes>
       <Footer/>
       </div>

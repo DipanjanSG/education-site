@@ -152,7 +152,7 @@
 
 .special-button {
   background-color: var(--app-bg-color);
-  padding: 1.5% 5%;
+  padding: .5% 2%;
   border-radius: 999px;
   color: #FFF;
   text-decoration: none;

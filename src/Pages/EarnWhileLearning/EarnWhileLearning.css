@@ -1,0 +1,73 @@
+.earn-learn-flex
+{
+  display: flex;
+  flex-direction: row;
+  gap: .5%;
+  align-items: flex-start;
+  margin: 1% 1%;
+  justify-content:center;
+}
+
+
+.earn-learn-flex > *
+{
+  flex: 1;
+}
+
+
+
+.timeline-container 
+{
+  position: relative;
+  margin-left: 5%;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 3%;
+  height: 100%;
+  background: white;
+  border-radius: 999px;
+}
+
+.timeline-entry {
+  position: relative;
+  margin: 8% 0%;
+}
+
+.dot {
+  position: absolute;
+  left: -6.7%;
+  top: 45%;
+  width: 15vw;
+  height: 3vw;
+  background: black;
+  border: 5px solid white;
+  border-radius: 999px;
+  z-index: 0;
+}
+
+.entry-content {
+  background: #000;
+  padding: 12px 16px;
+  margin-left: 20%;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  width: 30vw;
+  height: 30vw;
+  z-index: 5;
+  border: 5px solid white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color : var(--app-bg-color);
+}
+
+.sub-text
+{
+    color: white;
+}

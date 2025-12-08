@@ -1,6 +1,7 @@
 import './OnlineLibrary.css';
 import TripleTextCover from '../../Components/CoverSections/TripleTextCover/TripleTextCover';
 import hourGlass from "../../assets/hour-glass.png";
+import TripleTiles from '../../Components/TripleTiles/TripleTiles';
 
 
 
