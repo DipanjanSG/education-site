@@ -6,7 +6,6 @@ import PopUpExtraInfo from '../../PopUps/PopUpExtraInfo/PopUpExtraInfo';
 export default function KnowMoreButtonPopUp({onClickLink, marginLeft})
 {
 
-    const navigate = useNavigate();
     const[showPopUp, setShowPopUp] = useState(false);
     const additionalInfo = {
         heading: "Visual Learning",

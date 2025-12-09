@@ -1,0 +1,58 @@
+.ask-qs
+{
+    display: flex;
+    gap:5%;
+    justify-content: space-evenly;
+    margin: 5% 5%;
+}
+
+.ask-qs-personal-details
+{
+    display:flex;
+    flex-direction: column;
+    gap:5%;
+    
+}
+
+.ask-qs-input
+{
+    border-radius: 999px;
+    padding: 3.5%;
+    padding-left: 4%;
+    border: none;
+    resize: none;
+    background-color: var(--app-bg-color-secondary);
+    color: var(--app-bg-color);
+    outline: none;
+    color: white;
+    height: 12%;
+}
+
+.ask-qs-msg-section
+{
+    display:flex;
+    flex-direction: column;
+    gap:6%;
+    background-color: var(--app-bg-color-secondary);
+    /* color: white; */
+}
+
+/* .ask-qs-msg-section > *
+{
+    border-radius: 10px;
+    /* outline: none; */
+    border: none;
+} */
+
+.ask-qs-msg-subject
+{
+    height: 12%;
+
+}
+
+.ask-qs-textarea
+{
+     
+    padding: 3%;
+    outline: none;
+}

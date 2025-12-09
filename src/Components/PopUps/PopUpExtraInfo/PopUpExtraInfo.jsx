@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import './PopUpExtraInfo.css';
 
 export default function PopUpExtraInfo({setShowPopUp, extraInfo}) 
 {
+
+
+
     return(
 
         <section className="pop-up-overlay"  onClick={() => setShowPopUp(false)}>
@@ -10,13 +14,13 @@ export default function PopUpExtraInfo({setShowPopUp, extraInfo})
                 </section>
                 <section className='text-section'>
                     <section className="extra-info-header">
-                        <h1>{extraInfo.heading} </h1>
+                        <h1>{extraInfo.heading}</h1>
                         <hr></hr>
                     </section>
-                    
+                   
                     <main className='main-text'>
                         {extraInfo.body}
-                    </main>
+                    </main> 
                 </section>
             </section>
         </section>
