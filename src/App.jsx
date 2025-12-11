@@ -10,6 +10,7 @@ import UniqueTeaching from './Pages/UniqueTeaching/UniqueTeaching';
 import SuccessStory from './Pages/SuccessStory/SuccessStory';
 import OnlineLibrary from './Pages/OnlineLibrary/OnlineLibrary';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import ChatWidget from './Components/ChatWidget/ChatWidget';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
          <Route  path = "/online-library" element ={<OnlineLibrary/>} />
          <Route  path = "/contact-us" element ={<ContactUs/>} />
       </Routes>
+      <ChatWidget/>
       <Footer/>
       </div>
     </Router>
