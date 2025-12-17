@@ -7,14 +7,8 @@
     /* font-size: 10vh; */
 
     text-align: left;
-     display:flex;
-     flex-direction: column;
-    
-    ul 
-    {
-        color:#FFF;
-        list-style-type: none; /* Removes bullets */
-    }
+    display:flex;
+    flex-direction: column;
 
     h1{
          padding-left:3vh;
@@ -25,31 +19,60 @@
 }
 
 
-#mahasamvit-edu-course-syllabus section
+.course-syllabus-modules
 {
     display:flex;
     flex-direction: row;
-    align-items:center;
+    /* align-items:center; */
+       
+}
 
-
+.course-syllabus-modules > :first-child
+{
+    flex: 0 0 40vw;
+    padding-left:3vh;
 }
 
 
-#mahasamvit-edu-course-syllabus section h3
+/* .course-syllabus-modules section h3
 {
     width: 40vw;
     padding-left:3vh;
+} */
+
+#mahasamvit-edu-course-syllabus section ul{
+
+    color:#FFF;
+    list-style-type: none; /* Removes bullets */
 }
+
+#mahasamvit-edu-course-syllabus section li{
+
+    margin: 1vh 0;
+}
+
+
+
+
 
 
 
 #mahasamvit-edu-course-syllabus-action
 {
-          display:flex;
+    display:flex;
     flex-direction: row;
     align-items:center;
     justify-content: center;
     width: 90vw;
+    margin-top:8%;
+   
+
+}
+
+#mahasamvit-edu-course-syllabus-action > *
+{
+    margin-left : 5%;
+    justify-content: center;
    
 
 }
@@ -57,14 +80,13 @@
 #mahasamvit-edu-course-syllabus-action #text
 {
     width: 60vw;
-    padding-left:3vh;
+
     border-right: 5px solid white;
     justify-content: center;
 }
 
 .download-syllabus-button
 {
-    
     justify-content: center;
     width: 30vw;
     padding-left:3vh;

@@ -29,17 +29,12 @@ export default function CourseFacultySection()
 
 
     return(
-
         <section id = "mahasamvit-edu-course-faculty" >
              <span className="faculty-section-heading">Our World Class Faculty</span>
              <hr></hr>
-              <TileContainerContext.Provider value={{cssValues,knowMoreSection}}>
+             <TileContainerContext.Provider value={{cssValues,knowMoreSection}}>
                <TileContainer facultyList={facultyList}/>
-            </TileContainerContext.Provider>
+             </TileContainerContext.Provider>
         </section>
-
-
-
-
     );
 }

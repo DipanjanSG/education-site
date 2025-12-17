@@ -7,17 +7,24 @@ import CourseFacultySection from '../CourseFacultySection/CourseFacultySection.j
 import { useContext } from 'react';
 import CourseDetailAction from '../CourseDetailAction/CourseDetailAction.jsx';
 import CourseSummary from '../CourseSummary/CourseSummary.jsx';
+import { useEffect } from 'react';
 
-function CourseDetail({courseName})
+function CourseDetail({courseDetails})
 {
+
+    useEffect(
+        ()=>{ console.log("coursedetails",courseDetails); },
+        
+        [courseDetails]);
+
+
+
         return(
-
-
             <main>
-            <CourseSummary courseName={courseName}/>
+            <CourseSummary courseDetails={courseDetails}/>
             <CourseFacultySection/>
-            <CareerOpportunities/>
-            <Syllabus/>
+            <CareerOpportunities courseDetails={courseDetails}/> 
+            <Syllabus courseDetails={courseDetails}/>
             <CourseDetailAction/>
             </main>
         )

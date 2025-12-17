@@ -1,19 +1,27 @@
 import './CareerOpportunities.css';
 import financeStudentBlack3 from "../../assets/unlimited-reading.png";
+import { useEffect} from "react";
 
 
-
-export default function CareerOpportunities()
+export default function CareerOpportunities({courseDetails})
 {
+   useEffect(()=>
+   {
+        console.log("CareerOpportunities" , courseDetails);
+
+   }, []);
+
 
     return(
     <section id = "mahasamvit-edu-course-career-opp">
+
+        {courseDetails !== null &&
+        <section>
         <h1> Career Opportunities </h1>
         <hr></hr>
-
         <section className='career-opp-details'>
             <section>
-                <p className='career-opp-details-text'> Accounting is a core function in any business or organization. Professionals in accounting are responsible for tracking, analyzing, and reporting financial information, ensuring regulatory compliance, and providing insights for strategic decision-making. A career in accounting opens diverse opportunities in corporate, government, and consulting sectors.</p>
+                <p className='career-opp-details-text'>{courseDetails.careerOpportunities}</p>
                 <ul>
                     <li><b>Role</b> Auditing, taxation, financial reporting, and advisory services</li>  
                     <li><b>Employers</b> CA firms, corporates, government, self-practice</li>
@@ -24,7 +32,9 @@ export default function CareerOpportunities()
             <section>
                 <img src={financeStudentBlack3}></img>
             </section>
-        </section>               
+        </section>  
+        </section>   
+}          
     </section>
     
 );

@@ -9,6 +9,7 @@ import financeStudentBlack from "../../assets/finance-student-black.jpg";
 import Dropdown from "../../Components/Dropdown/Dropdown";
 import CourseDetail from '../../Components/CourseDetail/CourseDetail';
 import {SELECT_COURSES} from '../../constants/commonConstants';
+import {getCourse} from '../../apis/course.api';
 
 
 function CategoryCourseList()
@@ -17,14 +18,20 @@ function CategoryCourseList()
    const location = useLocation();
    const { courseCategory } = location.state || {} ;
    const [selectedCourseName, setSelectedCourseName ] = useState(null);
+   const [selectedCourseDetails, setSelectedCourseDetails ] = useState(null);
 
 
-   function selectCourseHandler(selectedCourseFromDropDown)
+   async function selectCourseHandler(selectedCourseFromDropDown)
    {
       if(selectedCourseFromDropDown === SELECT_COURSES)
          setSelectedCourseName(null);
       else
-         setSelectedCourseName(selectedCourseFromDropDown);
+         {
+            setSelectedCourseName(selectedCourseFromDropDown);
+            const {data} = await getCourse(selectedCourseFromDropDown);
+            console.log("additional" ,data.data);
+            await setSelectedCourseDetails(data.data);
+         }
 
    }
 
@@ -45,7 +52,7 @@ function CategoryCourseList()
             </div>
          </div>
 
-         {selectedCourseName !== null && <CourseDetail courseName={selectedCourseName}/>}
+         {selectedCourseName !== null && <CourseDetail courseDetails={selectedCourseDetails}/>}
       
 
 

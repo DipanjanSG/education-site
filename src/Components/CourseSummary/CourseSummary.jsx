@@ -1,11 +1,11 @@
 import './CourseSummary.css'
 
-function CourseSummary({courseName})
+function CourseSummary({courseDetails})
 {
         return(
                <section className="course-summary">
                 <section className="header-section">
-                    {courseName}
+                    {courseDetails !== null && courseDetails.name}
                 </section>
                 <hr></hr>
                 <header className="specific-career-opprtunity-media">
@@ -26,23 +26,21 @@ function CourseSummary({courseName})
 
                     <section className="summary">
                          
-                        <p id="summary-description">Course is designed to develop expertise in financial accounting, taxation, 
-                            auditing, and financial management. Will equip you with skills to handle 
-                            complex financial operations, ensure compliance with regulatory 
-                            frameworks, and provide strategic financial guidance in corporate and 
-                            public sectors.
+                        <p id="summary-description">
+                             {courseDetails !== null && courseDetails.details}
+
                         </p>
 
                         <section id="summary-grid">
                             <section id="summary-grid-item">
                                 <i class="bi bi-calendar2-range"></i>
-                                <p>2 Years Course</p>
+                                <p>{courseDetails !== null && courseDetails.duration} Years Course</p>
                             </section>    
 
 
                             <section id="summary-grid-item">
                                 <i class="bi bi-bookmark-check-fill"></i>
-                                <p>Class 12 Pass</p>
+                                <p>{courseDetails !== null && courseDetails.eligibility}</p>
                             </section>   
 
                             
@@ -53,14 +51,14 @@ function CourseSummary({courseName})
 
                             <section id="summary-grid-item">
                                 <i class="bi bi-cash-stack"></i>
-                                <p> 1 Lakh </p>
+                                <p>{courseDetails !== null && courseDetails.fees} Lakh </p>
                             </section>
                         </section>  
 
 
                         <section className="course-summary-action">
                             <br></br>
-                            <button class="btn btn-light rounded-pill"> Enroll in Next Batch : 12/12/15 </button>
+                            <button class="btn btn-light rounded-pill"> Enroll in Next Batch : {courseDetails!== null && courseDetails.nextEnrollmentDate} </button>
                         </section>
                          
                     

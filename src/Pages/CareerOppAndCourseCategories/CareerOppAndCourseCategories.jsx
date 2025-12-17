@@ -25,10 +25,17 @@ function CareerOppAndCourseCategories()
    const [rowThreePics , setRowThreePics] = useState([fundAndWealthMgmt,academicCourses,dualDegree]);
 
 
+    const handleTileClick = (e)=>
+    {
+        let tileClickedText = e.target.textContent;
+        setAdditionalInfo(additionalInfos.find((popUpText) => { return popUpText.heading === tileClickedText  } ));
+        setShowPopUp(true);
+       
+    };
+
 
    return (
     <div className='page'>
-        
 
      <div id="homepage-heading" >
         <h2>Career Opportunities in Finance</h2>
@@ -46,9 +53,9 @@ function CareerOppAndCourseCategories()
 
 
     <section className='tile-container'>
-    <TripleTiles careerLeftTile={"Banking & Insurance"} careerMiddleTile={"Legal Finance"} careerRightTile={"Capital, Commodity \n& Currency Market"} pics={rowOnePics}></TripleTiles>
-    <DualTiles careerLeftTile={"Govt Jobs (SEBI, RBI, EXCHANGES)"} careerRightTile={"Accounts & Tax"} pics={rowTwoPics}></DualTiles>
-    <TripleTiles careerLeftTile={"Fund & Wealth Management"} careerMiddleTile={"Academic Courses"} careerRightTile={"Dual Degree for Skilled Professionals"} pics={rowThreePics}></TripleTiles>
+        <TripleTiles careerLeftTile={"Banking & Insurance"} careerMiddleTile={"Legal Finance"} careerRightTile={"Capital, Commodity \n& Currency Market"} pics={rowOnePics} handleTileClick={handleTileClick} isLink={true}></TripleTiles>
+        <DualTiles careerLeftTile={"Govt Jobs (SEBI, RBI, EXCHANGES)"} careerRightTile={"Accounts & Tax"} pics={rowTwoPics}></DualTiles>
+        <TripleTiles careerLeftTile={"Fund & Wealth Management"} careerMiddleTile={"Academic Courses"} careerRightTile={"Dual Degree for Skilled Professionals"} pics={rowThreePics}></TripleTiles>
     </section>
     
     </div> 
