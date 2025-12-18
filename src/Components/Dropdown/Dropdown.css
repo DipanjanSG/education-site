@@ -2,28 +2,28 @@
 .course-selection-container
 {
   position: relative;
-  width: 70%;
+  width: 100%;
   justify-content: center;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 .course-selection-dropdown
 {
-    width: 90%;
+    width: 100%;
     min-height: 70px;
     background: black;;
     color: white;
     text-align: center;
     border-radius: 999px;
     cursor: pointer;
-    appearance: none;
+    /* appearance: none; */
     font-size:70%;
     /* padding: 0 20%; */
     padding: 12px 50px 12px 20px;  /* IMPORTANT: extra right padding */
 
 }
 
-.course-selection-container::after{
+/* .course-selection-container::after{
 
     content: "▼";         
     color: white; 
@@ -32,4 +32,4 @@
     align-items: center;
     cursor: pointer;
     pointer-events: auto;           
-}
+} */

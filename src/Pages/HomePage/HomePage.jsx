@@ -44,13 +44,13 @@ function HomePage() {
       </div>
 
       <div id="homepage-heading" >
-         <h1> Global Finance Education</h1>
+          <section className="cover-heading">Global Finance Education</section>
 
-        <div id="homepage-links"  > 
-         <span ><Link  to="/earn-while-learning"><span  className="special-button">Earn while you learn</span></Link></span> 
-         |
-         <span ><Link to="/course-categories"><span className="shrink-underline-black">Courses Offered By Us</span></Link> </span>
-      </div> 
+            <div id="homepage-links"  > 
+               <span ><Link  to="/earn-while-learning"><span  className="special-button">Earn while you learn</span></Link></span> 
+               |
+               <span ><Link to="/course-categories"><span className="shrink-underline-black">Courses Offered By Us</span></Link> </span>
+            </div> 
       </div>
 
       

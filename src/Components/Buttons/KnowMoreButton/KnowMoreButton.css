@@ -16,12 +16,14 @@
 
     background : var(--app-bg-color);
     color: #dcdcdc;
-    padding: 2% 2%;
-    width:4%;
-    height: 4%;
+    width:3vw;
+    height: 3vw;
     border-radius: 50%;
     text-align: center;
     transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items : center;
 }
 
 

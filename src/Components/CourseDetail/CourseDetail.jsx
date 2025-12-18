@@ -21,11 +21,11 @@ function CourseDetail({courseDetails})
 
         return(
             <main>
-            <CourseSummary courseDetails={courseDetails}/>
+            <CourseSummary courseDetails={courseDetails}/> 
             <CourseFacultySection/>
             <CareerOpportunities courseDetails={courseDetails}/> 
             <Syllabus courseDetails={courseDetails}/>
-            <CourseDetailAction/>
+            <CourseDetailAction/> 
             </main>
         )
 

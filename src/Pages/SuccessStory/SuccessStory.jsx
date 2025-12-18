@@ -6,6 +6,7 @@ import TileContainerContext from '../../Contexts/TileContainerContext';
 import coverPic1 from '../../assets/student1.png';
 import coverPic2 from '../../assets/student2.png';
 import coverPic3 from '../../assets/student3.png';
+import coverPic from '../../assets/ask-us-anything-cover.png';
 import Faculty from '../Models/Faculty';
 
 
@@ -33,7 +34,7 @@ export default function SuccessStory()
     return(
 
         <section>
-            <OnlyTextCover coverText={"Student Testimonials"}/>
+            <OnlyTextCover coverText={"Student Testimonials"} coverPic={coverPic} />
             <HorizontalSectionWithPic picOnLeft={true} pic={coverPic1} heading={"This course helped me understand concepts that always felt complicated before. The lessons were clear, practical, and easy to follow."} text={"Priya Anand"}/>
             <HorizontalSectionWithPic picOnLeft={false} pic={coverPic2} heading={"I went from knowing nothing to building real projects. I finally feel confident applying what I’ve learned."} text={"Rahul Pal"}/>
             

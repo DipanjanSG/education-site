@@ -62,7 +62,9 @@ export default function KnowMoreButtonPopUp({onClickLink, marginLeft})
 
     return(
         <section className='know-more-container' style={{ marginLeft : marginLeft}}>
-            <section><span>Know more</span> <span className="know-more-arrow" onClick={()=> setShowPopUp(true)}>&#x279C;</span></section>
+            <section><span>Know more</span></section>
+            
+             <span className="know-more-arrow-pop-up" onClick={()=> setShowPopUp(true)}>&#x279C;</span>
             {showPopUp === true && <PopUpExtraInfo setShowPopUp={setShowPopUp} extraInfo={additionalInfo}/>}
         </section>
         );
