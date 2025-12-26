@@ -8,7 +8,7 @@ export default function VertialSectionWithPic({pic,picOnLeft,heading,text,knowMo
         <section className="single-vertical-section-with-pic">
                    {picOnLeft && <img src={pic}/>}
 
-                   <section>
+                   <section className="text-sub-section">
                         <h2>{heading}</h2>
                         <hr></hr>
                         <br></br>

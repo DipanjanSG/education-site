@@ -16,7 +16,7 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename ="/global-education">
       <div>
       <Routes>
          <Route  path = "/" element ={<HomePage/>} />

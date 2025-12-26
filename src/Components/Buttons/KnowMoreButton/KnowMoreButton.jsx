@@ -1,6 +1,5 @@
 import './KnowMoreButton.css'
 import { useNavigate } from 'react-router-dom';
-import {useState} from 'react';
 import PopUpExtraInfo from '../../PopUps/PopUpExtraInfo/PopUpExtraInfo';
 
 export default function KnowMoreButton({onClickLink, marginLeft})

@@ -25,7 +25,7 @@ function SingleTilePic({contentsObj})
         <section id="tile_left" onClick={() => navigate(contentsObj.knowMoreLink)} className="single-horizontal-tile" 
                                          style={styleObj}>
                                                     
-            <img src={contentsObj.pic}></img>
+            <img src={`${import.meta.env.BASE_URL}${contentsObj.pic}`}></img>
             <section className="mahasamvit-edu-faculty-details">
                 
                 <span class="mahasamvit-edu-faculty-name"><span>{contentsObj.designation.length >0 && contentsObj.designation+ "\u00A0"}{contentsObj.name}</span>
